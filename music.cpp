@@ -146,6 +146,11 @@ void show_lastchord_line(int chord_prog[chord_number][bar_MAX + 1], int bar) {
 }
 
 int main(int argc, char* argv[]) {
+	if(argc == 1){
+		cout << "[ERROR] Please put argument." << endl;
+		return 1;
+	}
+	
 	int chord_prog[chord_number][bar_MAX + 1] = {};
 	int bar = atoi(argv[1]);
 	begin(chord_prog, bar);

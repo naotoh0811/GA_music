@@ -26,7 +26,7 @@ $bar = $_GET["bar"];
 echo $bar . "小節<br>";
 
 for($j = 0; $j < 10; $j++){
-	$cmd = "./music.out " . $bar;
+	$cmd = "./a.out " . $bar;
 	exec($cmd, $opt);
 	for($i = 0; $i < $bar; $i++){
 		$chord = $opt[$i + (int)$bar * $j];
